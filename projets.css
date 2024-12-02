@@ -1,0 +1,267 @@
+/*______CODE PRINCIPAL______*/
+/* Le Header */
+.header{
+    display: grid; /* pour pouvoir utiliser grid-template-columns */
+    grid-template-columns: max-content max-content; /* 2 colonnes de largeur minimale */
+    justify-content: space-between; /* pour espacer les éléments */
+    align-items: center; /* pour centrer verticalement */
+  
+    padding:0 24px; 
+    position: sticky; /* pour que le header reste en haut de la page */
+    top:0; /* pour que le header reste en haut de la page */
+    z-index: 999; /* repeindre */
+  }
+  
+  .header h1{
+    margin: 6px 0; /* pour éviter les marges par défaut du navigateur */
+  }
+  .header h1:hover{
+    animation: shake 0.5s; /* pour animer le logo en survole */
+  }
+  
+  @keyframes shake {
+    0%  { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+  
+  .header-nav{
+    display: grid;
+    grid-template-columns: max-content max-content ;
+    gap:0 24px ;
+  
+   
+  }
+  
+  .header-nav a{
+    color:white;
+    text-decoration: none;
+    font-family: "Jacquarda Bastarda 9", serif;
+    font-size: larger;
+  }
+  
+  .header-nav a:hover {
+    background: linear-gradient(90deg, #000000, #424242, #a9a9a9, #c0c0c0, #f6f6f6, #8a8a8a, #4f4f4f,#000000);
+    background-size: 200px; /* pour définir la largeur du dégradé */
+    -webkit-background-clip: text; /* pour que le dégradé soit visible dans le texte */
+    background-clip: text; /* pour que le dégradé soit visible dans le texte */
+    color: transparent; /* pour que le texte soit transparent */
+    animation: rainbow 1s linear infinite; /* pour animer le dégradé */
+  }
+  
+  @keyframes rainbow {
+    0% { background-position:  0 0; }
+    100% { background-position: 200px 0; }
+  }
+
+/* Texte superposé en haut */
+.text-overlay {
+    position: fixed;
+    top: 20px; /* Positionner en haut avec un espace */
+    left: 12%; /* Centrer horizontalement */
+    transform: translateX(-50%); /* Ajuster pour le centrage */
+    z-index: 10; /* Assurez-vous que le texte est au-dessus */
+    text-align: center;
+    font-family: 'Impact', sans-serif; /* Utiliser la police Impact */
+    font-size: 6rem; /* Taille du texte */
+    width: 100%; /* Prendre toute la largeur */
+    color: #ffffff; /* Couleur du texte */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombre pour améliorer la lisibilité */
+}
+
+html {
+    height: 100%;
+  }
+
+  body {
+    background: #1a1a1a;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+::selection {
+    background-color: rgb(58, 58, 58); 
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.page {
+    max-width: 100%;
+    margin: -16px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.loader-container{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-container.hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+
+/*______GRILLE IMAGE______*/
+
+.textegauche {
+    position:fixed;
+    left: -1px;
+    width: 350px;
+	color: rgb(255, 255, 255);
+    border-right: 2px solid black;
+    bottom: 0px;
+    padding-top: 140px;
+    padding-left: 20px;
+    padding-right: 20px;
+    top: 0px;
+    font-weight: bold;
+    font-size: large;
+    font-family:  'Neuebit', sans-serif;
+    text-align:left;
+    line-height: 85%;
+    font-weight:100;
+    font-size:17px;
+    color: rgb(255, 255, 255);
+    background-color: #1a1a1a;
+
+}
+
+.h1 {
+    font-family: 'Neuebit', sans-serif;
+    text-transform: uppercase;
+    text-align:left; 
+    line-height: 100%;
+    font-size: 19px;
+}
+    
+.projects{
+    display: grid;
+    top: 0px;
+    bottom: 0px;
+    padding-left: 350px;
+    margin-right: -17px;
+    padding-top: 150px;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+
+.footer{
+    position:sticky; 
+    left: 0 ; right: 0;
+    padding-bottom: 30px;
+    text-align: left; 
+    font-weight: bold;
+    font-size: large;
+    font-family:  'Neuebit', sans-serif;
+    line-height: 85%;
+    font-weight:100;
+    font-size:17px;
+    color: rgb(255, 255, 255);
+    background-color: #1a1a1a;
+
+}
+
+
+/*__________________________________texte déroulant_____________________________*/
+
+.scroll {
+    display: block;
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+    left: 0px;
+    top: 0px;
+    z-index: 10;
+    transition: 0.5s;
+}
+
+.scrollingtext {
+    text-transform: uppercase;
+    display: block;
+    font-family: 'Neuebit', sans-serif;
+    font-size: 26px;
+    font-weight: medium;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: black;
+    height: 30px;
+    padding-top: 7px;
+    white-space: nowrap;
+    text-indent: 100%;
+    animation: floatText 40s infinite linear;
+}
+
+.scrollingtext:hover {
+    color: white;
+    animation-play-state: paused;
+    background-color: rgb(255, 0, 255);
+    transition: 0.5s;
+}
+
+    /*________________________________grille image____________________________________*/
+
+      @media (min-width: 1000px){
+      
+          .header { display: none;}
+          .scrollingtext { font-size: 25px; height: 29px; }
+          .scroll { z-index: 20; }
+
+          .grid { grid-template-columns: repeat(2, 1fr); padding-top: 250px; 
+              margin-left: 80px; margin-right: 50px; gap: 60px; } 
+              .visuels { line-height: 60px; font-size: 19px; 
+              border: 4px solid black; border-radius: 40px ;}
+
+              
+              .textegauche { display: none;}
+              .footer{ font-size: 23px; padding-left: 60px ; padding-right: 60px; padding-top: 30px; }
+              .h1 { font-size: 25px; } 
+              .projects { padding-left: 15px; margin-right: -17px; padding-top: 190px;grid-template-columns: repeat(2, 1fr) }
+        
+      }
+      
+      /*__________________________barre sur le tec___________________________________*/
+      
+      
+      @media (min-width:1111px){
+          .section { display: none; }
+          .chroma { display: none;}
+          .scrollingtext { font-size: 26px; height: 30px; }
+          .header {display: grid;}
+          .top-nav { display: none; }
+          .loader { width:30%; height:30%; top:37%; left:35%; }
+          .logogauche { width: 500%; margin-bottom: 0px;}
+          .logodroite { width: 500%; margin-bottom: 50px;}
+          .responsive { color: white; }
+          .grid{ grid-template-columns: repeat(4, 1fr); padding-top: 200px; 
+          margin-left: 50px; margin-right: 20px; gap: 30px; }
+          .visuels {line-height: 40px; font-size: 13px;
+          border: 4px solid black; border-radius: 30px;}
+          .footer{ display: none}
+          .textegauche { display: block;}
+          .textegauche { padding-top: 140px; padding-left: 20px; 
+            padding-right: 20px; font-size:14px; border-right: 4px solid black;}
+          .h1 { font-size: 16px; } 
+          .projects { padding-left: 350px; margin-right: -17px; padding-top: 150px; }
+      }
+ 
+
+      
