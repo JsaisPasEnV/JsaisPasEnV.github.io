@@ -44,7 +44,7 @@
   .header-nav a{
     color:white;
     text-decoration: none;
-    font-family: "Jacquarda Bastarda 9", serif;
+    font-family: "Silkscreen", sans-serif; /* Utiliser la police Impact */
     font-size: larger;
   }
   
@@ -70,7 +70,7 @@
     transform: translateX(-50%); /* Ajuster pour le centrage */
     z-index: 10; /* Assurez-vous que le texte est au-dessus */
     text-align: center;
-    font-family: 'Impact', sans-serif; /* Utiliser la police Impact */
+    font-family: "Silkscreen", sans-serif; /* Utiliser la police Impact */
     font-size: 6rem; /* Taille du texte */
     width: 100%; /* Prendre toute la largeur */
     color: #ffffff; /* Couleur du texte */
@@ -83,6 +83,7 @@ html {
 
   body {
     background: #1a1a1a;
+    font-family: "Silkscreen", sans-serif; /* Utiliser la police Impact */
     margin: 0;
     padding: 0;
     display: flex;
@@ -135,7 +136,7 @@ img {
     top: 0px;
     font-weight: bold;
     font-size: large;
-    font-family:  'Neuebit', sans-serif;
+    font-family: "Silkscreen", sans-serif; /* Utiliser la police Impact */
     text-align:left;
     line-height: 85%;
     font-weight:100;
@@ -146,7 +147,7 @@ img {
 }
 
 .h1 {
-    font-family: 'Neuebit', sans-serif;
+  font-family: "Silkscreen", sans-serif; /* Utiliser la police Impact */
     text-transform: uppercase;
     text-align:left; 
     line-height: 100%;
@@ -171,7 +172,7 @@ img {
     text-align: left; 
     font-weight: bold;
     font-size: large;
-    font-family:  'Neuebit', sans-serif;
+    font-family: "Silkscreen", sans-serif; /* Utiliser la police Impact */
     line-height: 85%;
     font-weight:100;
     font-size:17px;
@@ -180,42 +181,6 @@ img {
 
 }
 
-
-/*__________________________________texte déroulant_____________________________*/
-
-.scroll {
-    display: block;
-    width: 100%;
-    position: fixed;
-    overflow: hidden;
-    left: 0px;
-    top: 0px;
-    z-index: 10;
-    transition: 0.5s;
-}
-
-.scrollingtext {
-    text-transform: uppercase;
-    display: block;
-    font-family: 'Neuebit', sans-serif;
-    font-size: 26px;
-    font-weight: medium;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    background-color: black;
-    height: 30px;
-    padding-top: 7px;
-    white-space: nowrap;
-    text-indent: 100%;
-    animation: floatText 40s infinite linear;
-}
-
-.scrollingtext:hover {
-    color: white;
-    animation-play-state: paused;
-    background-color: rgb(255, 0, 255);
-    transition: 0.5s;
-}
 
     /*________________________________grille image____________________________________*/
 

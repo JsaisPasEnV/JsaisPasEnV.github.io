@@ -97,7 +97,7 @@ h1 {
   .header-nav a{
     color:white;
     text-decoration: none;
-    font-family: "Jacquarda Bastarda 9", serif;
+    font-family: "Silkscreen", sans-serif;
     font-size: larger;
   }
   
@@ -165,6 +165,7 @@ h1 {
 
 /* Texte de présentation */
 .about-text {
+  font-family: "Silkscreen", sans-serif;
   max-width: 600px;
   text-align: center;
 }
@@ -178,5 +179,5 @@ h1 {
 .about-text p {
   font-size: 1.2rem;
   line-height: 1.6;
-  font-family: Arial, sans-serif;
+  font-family: "Silkscreen", sans-serif;
 }
