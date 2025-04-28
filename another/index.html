@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3XMA91</title>
+  <link rel="icon" type="image/png" href="img/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Silkscreen", sans-serif;
+      color: #ffffff;
+      overflow-x: hidden;
+      height: 100vh;
+    }
+
+    .projets {
+      display: flex;
+      gap: 50px;
+      align-items: center;
+      justify-content: start;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: max-content;
+    }
+
+    .projet img {
+      width: 80px;
+      height: auto;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .projet img:hover {
+      transform: scale(1.2);
+    }
+
+    .nom {
+  position: fixed;
+  top: 50px; /* plus haut */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 64px; /* beaucoup plus grand */
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  pointer-events: none; /* pour ne pas bloquer les clics */
+}
+
+
+    .overlay {
+      position: absolute;
+      width: 100vw;
+      min-height: 100vh;
+      z-index: 9999;
+      backdrop-filter: blur(10px);
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 48px;
+      top: 0;
+      left: 0;
+    }
+
+    .wrap {
+      width: 100%;
+    }
+
+    .fiche {
+      margin: 0px auto;
+      max-width: 640px;
+      padding: 0 20px 20px;
+      backdrop-filter: blur(2px);
+    }
+
+    .fiche .intro {
+      width: 70%;
+      margin-left: 70px;
+      margin-bottom: 53px;
+      margin-top: 53px;
+    }
+
+    .fiche img {
+      margin: 0 -20px 20px;
+      width: calc(100% + 40px);
+    }
+
+    .description {
+      margin-bottom: 24px;
+    }
+
+    .barre-deroulante {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: #ffffff; /* couleur de fond de la barre */
+  overflow: hidden;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+}
+
+.texte-deroulant {
+  white-space: nowrap;
+  display: inline-block;
+  color: #000000; /* couleur du texte */
+  font-size: 18px;
+  padding-left: 100%;
+  animation: defilement 15s linear infinite;
+}
+
+@keyframes defilement {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+  </style>
+</head>
+<body>
+
+  <header class="header"></header>
+
+  <h1 class="nom">3XMA91</h1>
+
+  <div class="projets"></div>
+
+  <div class="barre-deroulante">
+    <div class="texte-deroulant">
+      Eliott Borderies @3xma91 - Designer Graphique en devenir actuellement en formation à l'ÉSAD d'Amiens (2ème année) !
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script type="module" src="main.js"></script>
+
+</body>
+</html>
